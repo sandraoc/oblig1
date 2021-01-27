@@ -1,0 +1,256 @@
+body{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "header"
+                         "main";
+    margin: 0px;
+    height: 100%;
+}
+
+#top {
+    grid-area: header;
+    box-shadow: #00000019 0px 10px 10px -5px;
+    margin: 0px;
+    padding: 0px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "header1 nav";
+    margin: 0 15%;
+}
+
+header {
+    margin: 0px;
+    grid-area: header1;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+h1 {
+    margin: 0px;
+    align-self: center;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    font-family: MetropolisExtraBold;
+}
+
+nav {
+    margin: 0px;
+    grid-area: nav;
+    height: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0px;
+    align-self: center;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    font-family: MetropolisMedium;
+}
+
+main {
+    grid-area: main;
+    margin: 0px;
+    padding: 3% 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form section {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+form section label {
+    font-size: 14px;
+    font-family: MetropolisBold;
+}
+
+#text , textarea {
+    border-radius: 7px;
+    margin: 5px 0px 0px 0px;
+    border: solid 1px #707070;
+    
+}
+
+#text {
+    height: 50px;
+    width: 50%;
+}
+
+textarea {
+    resize: none;
+}
+
+#submit {
+    width: 141px;
+    font-size: 20px;
+    font-family: MetropolisMedium;
+    background-color: #56D4C2;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 0px;
+    align-self: flex-end;
+    margin: 10px 0;
+}
+
+#submit:hover {
+    background-color: #6CE6D5;
+}
+
+#todolist {
+    margin: 2% 0 12% 0;
+}
+
+#todos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "todo1 todo2 todo3"
+                         "todo4 todo5 todo6";
+    row-gap: 12%;
+    column-gap: 4%;
+    margin: 1% 0;
+}
+
+#todo1 {
+    grid-area: todo1;
+}
+
+#todo2 {
+    grid-area: todo2;
+}
+
+#todo3 {
+    grid-area: todo3;
+}
+
+#todo4 {
+    grid-area: todo4;
+}
+
+#todo5 {
+    grid-area: todo5;
+}
+
+#todo6 {
+    grid-area: todo6;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: MetropolisExtraBold;
+    color: #000000;
+}
+
+h3 {
+    font-size: 16px;
+    font-family: MetropolisBold;
+    color: #333333;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    font-family: MetropolisRegular;
+    color: #333333;
+    line-height: 1.6;
+    margin: 7px 0 15px 0;
+}
+
+article {
+    box-shadow: #5DD3D829 0px 10px 7px 0px;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+article section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+article section button {
+    font-size: 11px;
+    font-family: MetropolisBold;
+    background-color: #56D4C2;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 5px 0px 0px 0px;
+    padding: 7px;
+    width: 77px;
+}
+
+article section button:hover {
+    background-color: #6CE6D5;
+}
+
+article section button, #submit:focus {
+    outline: none;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    #top {
+    grid-template-columns: 1fr;
+    grid-row: auto auto;
+    grid-template-areas:
+    "header"
+    "main";
+}
+
+#top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "header1 nav";
+    margin: 0;
+}
+
+#todos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "todo1"
+                         "todo2"
+                         "todo3"
+                         "todo4" 
+                         "todo5" 
+                         "todo6";
+    grid-gap: 5%;
+    margin: 2% 0;
+}
+
+#text, #textarea {
+    width: 100%;
+}
